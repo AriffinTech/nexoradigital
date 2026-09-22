@@ -1,0 +1,270 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: var(--font-sans), Inter, suisse, ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-sans), Inter, suisse, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono), soehneMono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+  --radius-3xl: var(--radius-3xl);
+  --radius-4xl: var(--radius-4xl);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  --shadow-flat: var(--shadow-flat);
+  --shadow-low: var(--shadow-low);
+  --shadow-medium: var(--shadow-medium);
+}
+
+@layer base {
+  :root {
+    /* Warm stone palette for industrial feel */
+    --background: #fafaf9; /* stone-50 */
+    --foreground: #022c22; /* Emerald 950 */
+    --card: #ffffff;
+    --card-foreground: #022c22;
+    --popover: #ffffff;
+    --popover-foreground: #022c22;
+    --primary: #047857; /* Emerald 700 */
+    --primary-foreground: #ecfdf5; /* Emerald 50 */
+    --secondary: #f5f5f4; /* stone-100 */
+    --secondary-foreground: #022c22; /* Emerald 950 */
+    --muted: #f5f5f4; /* stone-100 */
+    --muted-foreground: #57534e; /* stone-500 */
+    --accent: #f5f5f4; /* stone-100 */
+    --accent-foreground: #022c22; /* Emerald 950 */
+    --destructive: #dc2626; /* red-600 */
+    --destructive-foreground: #fef2f2; /* red-50 */
+    --border: #d6d3d1; /* stone-300 */
+    --input: #d6d3d1; /* stone-300 */
+    --ring: #047857; /* Emerald 700 */
+    
+    /* Master Design System Radius Scale */
+    --radius-xs: .125rem;
+    --radius-sm: .25rem;
+    --radius-md: .375rem;
+    --radius-lg: .5rem;
+    --radius-xl: .75rem;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
+    --radius-4xl: 2rem;
+    --radius-pill: 9999px;
+    
+    --radius-micro: var(--radius-xs);
+    --radius-standard: var(--radius-sm);
+    --radius-comfortable: var(--radius-md);
+    --radius-card: var(--radius-xl);
+    --radius-panel: var(--radius-2xl);
+    --radius: var(--radius-lg);
+
+    /* Spatial scale (8pt / 4pt geometric rhythm) */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-24: 96px;
+    --space-32: 128px;
+
+    /* Multi-layer focus glow and Shadows */
+    --shadow-focus: 0 0 0 2px rgba(4, 120, 87, 0.4), 0 0 0 4px rgba(4, 120, 87, 0.2);
+    --shadow-flat: 0 0 #0000;
+    --shadow-low: 0 1px 2px #00000026;
+    --shadow-medium: 0 2px 8px #00000010, 0 1px 2px #00000010;
+
+    --chart-1: #047857;
+    --chart-2: #0f766e;
+    --chart-3: #0369a1;
+    --chart-4: #ca8a04;
+    --chart-5: #ea580c;
+
+    --sidebar: #ffffff;
+    --sidebar-foreground: #022c22;
+    --sidebar-primary: #047857;
+    --sidebar-primary-foreground: #ecfdf5;
+    --sidebar-accent: #f5f5f4;
+    --sidebar-accent-foreground: #022c22;
+    --sidebar-border: #d6d3d1;
+    --sidebar-ring: #047857;
+  }
+
+  .dark {
+    --background: #022c22; /* Emerald 950 */
+    --foreground: #fafaf9; /* stone-50 */
+    --card: #064e3b; /* Emerald 900 */
+    --card-foreground: #fafaf9; /* stone-50 */
+    --popover: #064e3b; /* Emerald 900 */
+    --popover-foreground: #fafaf9; /* stone-50 */
+    --primary: #10b981; /* Emerald 500 */
+    --primary-foreground: #022c22; /* Emerald 950 */
+    --secondary: #064e3b; /* Emerald 900 */
+    --secondary-foreground: #fafaf9; /* stone-50 */
+    --muted: #064e3b; /* Emerald 900 */
+    --muted-foreground: #a8a29e; /* stone-400 */
+    --accent: #064e3b; /* Emerald 900 */
+    --accent-foreground: #fafaf9; /* stone-50 */
+    --destructive: #ef4444; /* red-500 */
+    --destructive-foreground: #fef2f2; /* red-50 */
+    --border: #065f46; /* Emerald 800 */
+    --input: #065f46; /* Emerald 800 */
+    --ring: #10b981; /* Emerald 500 */
+
+    --shadow-focus: 0 0 0 2px rgba(16, 185, 129, 0.4), 0 0 0 4px rgba(16, 185, 129, 0.2);
+
+    --chart-1: #10b981;
+    --chart-2: #14b8a6;
+    --chart-3: #0ea5e9;
+    --chart-4: #eab308;
+    --chart-5: #f97316;
+
+    --sidebar: #022c22;
+    --sidebar-foreground: #fafaf9;
+    --sidebar-primary: #10b981;
+    --sidebar-primary-foreground: #022c22;
+    --sidebar-accent: #064e3b;
+    --sidebar-accent-foreground: #fafaf9;
+    --sidebar-border: #065f46;
+    --sidebar-ring: #10b981;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: normal;
+    font-feature-settings: "cv01", "ss03";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  h1 {
+    font-size: var(--text-3xl);
+    font-weight: 600;
+    line-height: var(--text-3xl--line-height);
+    letter-spacing: -0.015em;
+  }
+  h2 {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    line-height: var(--text-2xl--line-height);
+    letter-spacing: var(--tracking-tight);
+  }
+  small {
+    font-size: 80%;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--font-mono);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+}
+
+/* UI emphasis weight 510 */
+.font-ui-emphasis {
+  font-variation-settings: "wght" 510;
+  font-weight: 510;
+}
+
+/* Progressive Negative Tracking Scale */
+.tracking-display-2xl {
+  letter-spacing: -0.022em;
+  line-height: 1.0;
+}
+.tracking-display-xl {
+  letter-spacing: -0.022em;
+  line-height: 1.05;
+}
+.tracking-display-lg {
+  letter-spacing: -0.022em;
+  line-height: 1.1;
+}
+.tracking-heading-md {
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+.tracking-heading-sm {
+  letter-spacing: -0.012em;
+  line-height: 1.3;
+}
+.tracking-body-lg {
+  letter-spacing: -0.010em;
+  line-height: 1.6;
+}
+.tracking-mono-badge {
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+}
+.tracking-micro-mono {
+  letter-spacing: 0.15em;
+  line-height: 1.0;
+}
+
+/* Reduced Motion Accessibility Compliance */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
