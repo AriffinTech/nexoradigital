@@ -18,7 +18,7 @@ export default function HomePage() {
 
       {/* 2. SOLUTIONS SECTION */}
       <section className="py-16 sm:py-24 bg-secondary">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <FadeIn direction="up">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4 sm:gap-6">
               <div>
@@ -36,7 +36,7 @@ export default function HomePage() {
             </div>
           </FadeIn>
 
-          <FadeInStagger faster className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <FadeInStagger faster className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             <FadeIn>
               <ProjectCard 
                 title="Energy Management System (EMS)"
@@ -79,8 +79,8 @@ export default function HomePage() {
 
       {/* 3. EECA COMPLIANCE SECTION */}
       <section className="py-16 sm:py-24 bg-emerald-950 text-white">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn direction="up">
               <div className="inline-flex items-center gap-2 py-1 text-xs font-semibold uppercase tracking-widest text-white mb-4">
                 <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/15 font-mono text-[0.65rem] font-bold">02</span>
@@ -140,7 +140,7 @@ export default function HomePage() {
 
       {/* 4. STATS SECTION (Zebra Pacing: Elevated Surface) */}
       <section className="py-12 sm:py-16 bg-background border-y border-border">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <FadeIn direction="up">
             <SectionLabel index="03">Operational Evidence</SectionLabel>
           </FadeIn>
@@ -187,7 +187,7 @@ export default function HomePage() {
 
       {/* 5. INDUSTRIES SECTION */}
       <section className="py-16 sm:py-24 bg-emerald-900 text-white">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <FadeIn direction="up">
             <div className="inline-flex items-center gap-2 py-1 text-xs font-semibold uppercase tracking-widest text-white mb-4">
               <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/15 font-mono text-[0.65rem] font-bold">04</span>
@@ -244,7 +244,7 @@ export default function HomePage() {
 
       {/* 6. BLOG / INSIGHTS SECTION (Zebra Pacing: Elevated Surface) */}
       <section className="py-16 sm:py-24 bg-secondary">
-        <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="lg:col-span-3">
             <FadeIn direction="up">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 sm:mb-10 gap-3">
@@ -257,7 +257,7 @@ export default function HomePage() {
               </div>
             </FadeIn>
             
-            <FadeInStagger faster className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <FadeInStagger faster className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
               {[
                 {
                   date: "10 Dec 2024",

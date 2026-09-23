@@ -6,8 +6,8 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <div className="w-full py-20 lg:py-40">
-      <div className="container mx-auto px-4 md:px-6">
+    <div className="w-full pt-32 pb-16 lg:pt-48 lg:pb-32">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 gap-12 items-center lg:grid-cols-2">
           <div className="flex gap-4 flex-col">
             <div>
@@ -17,11 +17,11 @@ function Hero() {
               </Badge>
             </div>
             <div className="flex gap-4 flex-col mt-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl max-w-xl tracking-tight text-left font-extrabold leading-[1.05]">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl max-w-xl lg:max-w-2xl tracking-tight text-left font-extrabold leading-[1.05]">
                 Smarter Manufacturing <br className="hidden sm:block" />
                 <span className="text-muted-foreground">Brighter Tomorrow</span>
               </h1>
-              <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-md text-left mt-4">
+              <p className="text-lg md:text-xl leading-relaxed text-muted-foreground max-w-md lg:max-w-xl text-left mt-4">
                 Empowering Malaysian manufacturers through energy efficiency, operational visibility, and end-to-end digitalisation.
               </p>
             </div>
@@ -38,7 +38,7 @@ function Hero() {
               </Button>
             </div>
           </div>
-          <div className="bg-muted rounded-2xl aspect-square relative overflow-hidden border border-foreground/10 shadow-sm">
+          <div className="bg-muted rounded-2xl aspect-square lg:aspect-[4/3] xl:aspect-video lg:max-h-[550px] relative overflow-hidden border border-foreground/10 shadow-sm">
              <Image 
                 src="/images/smart-factory-hero.jpg"
                 alt="Automated Smart Factory Robotics"
