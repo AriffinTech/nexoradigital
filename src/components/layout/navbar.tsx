@@ -24,13 +24,13 @@ export function Navbar() {
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-6xl rounded-full border border-foreground/10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="flex h-14 items-center justify-between px-6">
         <div className="flex items-center">
-          <Link href="/" className="mr-8 flex flex-col justify-center space-y-1">
-            <span className="font-heading font-extrabold tracking-tight text-2xl flex items-center">
-              <div className="w-2.5 h-2.5 rounded-sm bg-primary mr-2" />
+          <Link href="/" className="mr-4 sm:mr-8 flex flex-col justify-center space-y-0.5 sm:space-y-1">
+            <span className="font-heading font-extrabold tracking-tight text-xl sm:text-2xl flex items-center">
+              <div className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-sm bg-primary mr-1.5 sm:mr-2" />
               NEXORA
-              <span className="text-primary ml-1.5">DIGITAL</span>
+              <span className="text-primary ml-1 sm:ml-1.5">DIGITAL</span>
             </span>
-            <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium pl-[1.125rem]">
+            <span className="hidden sm:block text-[10px] uppercase tracking-widest text-muted-foreground font-medium pl-[1.125rem]">
               Smarter Factories, Sustainable Tomorrow
             </span>
           </Link>
@@ -95,15 +95,15 @@ export function Navbar() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="pr-4 w-[85vw] max-w-sm flex flex-col justify-between overflow-y-auto">
+            <SheetContent side="left" className="p-6 w-[85vw] max-w-sm flex flex-col justify-between overflow-y-auto">
               <div>
                 <SheetClose asChild>
-                  <Link href="/" className="flex flex-col justify-center space-y-1 mb-8 pt-2">
+                  <Link href="/" className="flex flex-col justify-center space-y-1 mb-8 pt-2 pr-6">
                     <span className="font-heading font-extrabold tracking-tight text-xl flex items-center">
                       <div className="w-2 h-2 rounded-sm bg-primary mr-2" />
                       NEXORA <span className="text-primary ml-1">DIGITAL</span>
                     </span>
-                    <span className="text-[9px] uppercase tracking-widest text-muted-foreground font-medium pl-4">
+                    <span className="text-[9px] uppercase tracking-widest text-muted-foreground font-medium pl-4 leading-relaxed">
                       Smarter Factories, Sustainable Tomorrow
                     </span>
                   </Link>
